@@ -1,0 +1,17 @@
+{
+  "name": "oz-evt",
+  "version": "0.0.1",
+  "description": "Event propagation tag for Oz",
+  "dependencies": {
+  },
+  "development": {
+    "treygriffith/oz": "^0.1.0",
+    "ramitos/children": "*",
+    "component/assert": "*",
+    "adamsanderson/trigger-event": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "main": "index.js"
+}
