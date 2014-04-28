@@ -1,8 +1,11 @@
 
 var Oz = require('oz');
+var evtTag = require('oz-evt');
 var assert = require('assert');
 var trigger = require('trigger-event');
 var children = require('children');
+
+Oz.use(evtTag);
 
 describe("Events", function(){
 
