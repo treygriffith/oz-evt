@@ -10,7 +10,7 @@ Oz.use(evtTag);
 describe("Events", function(){
 
   it('should emit events based on DOM events', function(next){
-    var template = Oz('<div oz-evt="click:save"></div>');
+    var template = Oz('<div oz-evt-click="save"></div>');
     var el = children(template.render())[0];
 
     template.on('save', function (_el) {
@@ -24,7 +24,7 @@ describe("Events", function(){
   });
 
   it('should pass the current context to the event handler', function(next){
-    var template = Oz('<div oz-evt="click:save"></div>');
+    var template = Oz('<div oz-evt-click="save"></div>');
     var person = { name: 'Tobi' };
     var el = children(template.render(person))[0];
 
@@ -38,7 +38,7 @@ describe("Events", function(){
   });
 
   it('should only execute one event, even after re-rendering', function(next){
-    var template = Oz('<div oz-evt="click:save;dblclick:delete"></div>');
+    var template = Oz('<div oz-evt-click="save" oz-evt-dblclick="delete"></div>');
     var el = children(template.render())[0];
     template.update();
 
